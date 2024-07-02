@@ -1,6 +1,6 @@
-drop database if exists ifsp;
-create database if not exists ifsp;
-use ifsp;
+drop database if exists IFSP;
+create database if not exists IFSP;
+use IFSP;
 
 create table Cidade
 (
