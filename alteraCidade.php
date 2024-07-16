@@ -35,7 +35,10 @@
         </select>
     </div>
     <div>
-        <button type="submit">Cadastrar</button>
+        <input type="hidden" name="id" value="<?php echo $row['id'] ?>">
+    </div>
+    <div>
+        <button type="submit">Alterar</button>
     </div>
     </fieldset>
 </form>

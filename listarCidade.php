@@ -10,11 +10,9 @@
 
     <?php
         include('includes/conexao.php');
-        $sql = "select * from Cidade";
-        //executa a consulta 
+        $sql = "SELECT * FROM Cidade";
         $result = mysqli_query($con, $sql);
-        //retorna apenas uma linha 
-        
+        $row = mysqli_fetch_array($result);
     ?>
 
     <h1>Consulta de cidades</h1>
