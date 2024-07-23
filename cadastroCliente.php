@@ -13,16 +13,13 @@
         $nome = $_POST['nome'];
         $email = $_POST['email'];
         $senha = $_POST['senha'];
-        $atv = $_POST['atv'];
+        $ativo = $_POST['ativo'];
         $cidade = $_POST['cidade'];
         echo "<h1>Dados do cliente</h1>";
         echo "Nome: $nome<br>";
         echo "Email: $email<br>";
-        echo "Senha: $senha<br>";
-        echo "Ativo: $atv<br>";
-
         $sql = "insert into Cliente (nome, email, senha, ativo, id_Cidade)";
-        $sql .= " values('".$nome."','".$email."','".$senha."','".$atv."','".$cidade."')";
+        $sql .= " values('".$nome."','".$email."','".$senha."','".$ativo."','".$cidade."')";
         echo $sql;
 
         //executa comando no banco de dados
