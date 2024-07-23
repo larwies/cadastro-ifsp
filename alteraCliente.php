@@ -1,7 +1,7 @@
 <?php
     include('includes/conexao.php');
     $id = $_GET['id'];
-    $sql = "SELECT * FROM Cidade WHERE id=$id";
+    $sql = "SELECT * FROM Cliente WHERE id=$id";
     $result = mysqli_query($con, $sql);
     $row = mysqli_fetch_array($result);
 ?>
@@ -25,14 +25,18 @@
                     echo $row['nome'];
                 ?>
         ">
-    </div>
-    <div>
-        <label for="estado">Estado</label>
-        <select name="estado" id="estado">
-            <option value="SP" <?php echo $row['estado'] == "SP" ? "selected" : "" ?>>SP</option>
-            <option value="RJ" <?php echo $row['estado'] == "RJ" ? "selected" : "" ?>>RJ</option>
-            <option value="MG" <?php echo $row['estado'] == "MG" ? "selected" : "" ?>>MG</option>
-        </select>
+        <label for="email">Email</label>
+        <input type="text" name="email" id="email" 
+        value="<?php
+                    echo $row['email'];
+                ?>
+        ">
+        <label for="senha">Senha</label>
+        <input type="text" name="senha" id="senha" 
+        value="<?php
+                    echo $row['senha'];
+                ?>
+        ">
     </div>
     <div>
         <input type="hidden" name="id" value="<?php echo $row['id'] ?>">
