@@ -14,6 +14,12 @@
         $result = mysqli_query($con, $sql);
         $row = mysqli_fetch_array($result);
     ?>
+    <?php
+        include('includes/conexao.php');
+        $sql = "SELECT cli.id, cli.nome nomecliente, cli.email, cli.ativo, cid.nome nomecidade, cid.estado FROM Cliente cli 
+        LEFT JOIN Cidade cid on cid.id = cli.id_cidade";
+        $result = mysqli_query($con, $sql);
+    ?>
 
     <h1>Consulta de clientes</h1>
     <a href="cadastroCliente.html">Cadastrar novo cliente</a>
@@ -23,6 +29,9 @@
         <th>Nome</th>
         <th>Email</th>
         <th>Senha</th>
+        <th>Ativo</th>
+        <th>Cidade</th>
+        <th>Estado</th>
         <th>Alterar</th>
         <th>Deletar</th>
     </tr>
